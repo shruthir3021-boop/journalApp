@@ -28,6 +28,9 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<properties>
+			<sonar.organization>shruthir3021-boop</sonar.organization>
+		</properties>
 	</properties>
 	<dependencies>
 		<dependency>
