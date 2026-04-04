@@ -1,4 +1,4 @@
-package com.shruthi.journalApp.config;
+package com.shruthi.journalapp.config;
 
 import com.shruthi.journalapp.filter.JwtFilter;
 import com.shruthi.journalapp.service.UserDetailsServiceImpl;
@@ -33,7 +33,7 @@ public class SpringSecurity {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests(request -> request
-                        .requestMatchers("/public/**").permitAll()
+                        .requestMatchers("/public/**","/swagger-ui/**","/v3/api-docs/**","/swagger-ui.html").permitAll()
                         .requestMatchers("/journal/**", "/user/**").authenticated()
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .anyRequest().authenticated())

@@ -7,6 +7,7 @@ import com.shruthi.journalapp.repository.UserRepository;
 import com.shruthi.journalapp.service.JournalEntryService;
 import com.shruthi.journalapp.service.UserService;
 import com.shruthi.journalapp.service.WeatherService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,6 +24,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/user")
+@Tag(name =  "User APIs", description = "Read, Update & Delete User")
 @Component public class UserController {
 
     @Autowired

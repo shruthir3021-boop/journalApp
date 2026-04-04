@@ -1,5 +1,6 @@
 package com.shruthi.journalapp.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import com.shruthi.journalapp.entity.User;
 import com.shruthi.journalapp.service.UserDetailsServiceImpl;
@@ -15,10 +16,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.Authentication;
 
+import javax.swing.text.html.HTML;
 
 
 @RestController
 @RequestMapping("/public")
+@Tag(name="Public APIs")
 @Slf4j
 public class PublicController {
     @Autowired
