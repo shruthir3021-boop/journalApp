@@ -1,7 +1,5 @@
 
 spring:
-  profiles:
-    active: local
   data:
     mongodb:
       uri: ${MONGODB_URI}
